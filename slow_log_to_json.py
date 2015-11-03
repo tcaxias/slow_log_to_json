@@ -13,7 +13,6 @@ from re import split, sub, compile
 from itertools import chain
 from pprint import pprint
 from fileinput import input
-from json import dumps
 
 backticks=compile('`')
 metadata=compile('((?:#[^\n]+\n)+)')
