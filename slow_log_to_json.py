@@ -11,8 +11,8 @@ else:
 
 from re import split, sub, compile
 from itertools import chain
-from pprint import pprint
 from fileinput import input
+from json import dumps
 
 backticks=compile('`')
 metadata=compile('((?:#[^\n]+\n)+)')
@@ -63,4 +63,5 @@ for i in metadata_and_data_grouped:
                         newline.sub(' ',i[1]))))})
 #    slow_log_dict[-1].pop('QC_hit',None)
 
-map(lambda x : pprint(x),slow_log_dict)
+for i in slow_log_dict:
+    print dumps(i)
